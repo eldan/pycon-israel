@@ -9,15 +9,28 @@
         margin: 0.5em auto;
         padding: 0.3em 0;
     }
-    .row { margin-top: 2em; }
+    .row {
+      margin-top: 1em;
+      border-bottom: 1px solid gray;
+      padding: 10px;
+    }
+
     .sponsor-name {
-        text-align: right;
+        text-align: left;
+        padding: 20px 70px;
+        h3 {
+          color: gray;
+        }
     }
     .sp-logos {
-        display: flex;
-        flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
     }
-    img { max-height: 100px; }
+    .sp-logo {
+      text-align: center;
+      img {
+        max-height: 100px;
+        max-width: 240px;
+        padding: 10px;
+      }
+    }
 }

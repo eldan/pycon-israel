@@ -10,22 +10,21 @@
     {% sponsors sponsor_level.name as level_sponsors %}
     {% if level_sponsors %}
       <div class="row">
-        <div class="col-3 sponsor-name">
+        <div class="col-lg-3 sponsor-name">
           <h3>{{ sponsor_level.name }}</h3>
         </div>
-        <div class="col-9 sp-logos">
+
         {% sponsors sponsor_level.name as level_sponsors %}
         {% for sponsor in level_sponsors %}
-          <div class="sp-logo">
+          <div class="col-lg-3 sp-logo">
             <a href="{{ sponsor.external_url }}" title="{{ sponsor.name }}">
               {% thumbnail sponsor.website_logo '300x300' as icon %} {# Set size according to level? #}
               <img src="{{ icon|data_uri }}" alt="{{ sponsor.name }}">
             </a>
           </div>
         {% endfor %}
-      </div>
-    </div>  
-    {% endif %}  
+
+    </div>
+    {% endif %}
   {% endfor %}
 </div>
-
